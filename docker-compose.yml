@@ -1,0 +1,11 @@
+version: "3"
+services:
+  squid-alpine-ssl:
+    image: alpine:3.2
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./log:/var/log/
+      - ./conf/squid.conf:/etc/squid/squid.conf
+      - ./cache:/var/cache
+    restart: always
