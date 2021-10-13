@@ -3,7 +3,7 @@ services:
   squid-alpine:
     image: alpine:3.2
     ports:
-      - "3128:3128"
+      - "8080:8080"
     volumes:
       - ./log:/var/log/
       - ./conf/squid.conf:/etc/squid/squid.conf
