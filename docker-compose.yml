@@ -1,7 +1,7 @@
 version: "3"
 services:
-  squid-alpine:
-    image: fofonovrv/squid
+  squid:
+    image: alatas/squid-alpine-ssl:latest
     ports:
       - "8080:8080"
     volumes:
@@ -9,3 +9,4 @@ services:
       - ./conf/squid.conf:/etc/squid/squid.conf
       - ./cache:/var/cache
     restart: always
+
