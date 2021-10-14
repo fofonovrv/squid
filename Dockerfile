@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:3.7
 
 MAINTAINER fofonovrv@gmail.com
 
@@ -8,6 +8,7 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 
 COPY start-squid.sh /usr/local/bin/
+COPY conf/squid*.conf /etc/squid/
 
 RUN chmod +x /usr/local/bin/start-squid.sh
 
