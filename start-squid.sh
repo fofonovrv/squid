@@ -20,8 +20,6 @@ initialize_cache() {
 	sleep 5
 }
 
-# Give the Squid cache some time to rebuild.
-sleep 5
 
 # Launch squid
 run() {
